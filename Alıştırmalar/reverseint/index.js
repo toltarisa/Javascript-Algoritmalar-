@@ -15,7 +15,7 @@ function reverseint(n){
     // return reversedInt;
 
     var reversed = n.toString().split('').reverse().join('');
-    return parseInt(reversed);
+    return parseInt(reversed) * Math.sign(n);
 }
 
 module.exports = reverseint();
