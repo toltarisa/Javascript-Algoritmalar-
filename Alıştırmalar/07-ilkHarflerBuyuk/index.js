@@ -16,13 +16,13 @@
 
 */
 
-function capitalize(str){
-    const splitted = str.split(' ');
-    return splitted.map((value)=>{
-        const bigger = value[0].toUpperCase();
-        const sum = bigger + value.slice(1);
-        return sum;
-        }).join(' ');
-    }
+    function capitalize(str){
+        const splitted = str.split(' ');
+        return splitted.map((value)=>{
+            const bigger = value[0].toUpperCase();
+            const sum = bigger + value.slice(1);
+            return sum;
+            }).join(' ');
+        }
   
 module.exports = capitalize;  
