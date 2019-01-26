@@ -2,6 +2,19 @@
 //her kelimenin ilk harfini upperCase yaparak döndur
 
 //örn: capitalize('merhaba ben isa') ==> 'Merhaba Ben İsa'
+/*DİGER COZUM YOLU
+
+    function capitalize(str){
+        const words = [];
+
+        for(let word of str.split(' ')){
+            words.push(word[0].toUpperCase() + word.slice(1));
+        }
+
+        return words.join(' ');
+    }
+
+*/
 
 function capitalize(str){
     const splitted = str.split(' ');
