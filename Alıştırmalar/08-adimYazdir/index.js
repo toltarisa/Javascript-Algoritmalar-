@@ -15,19 +15,40 @@
     ###
 */
 
-function steps(n){
-    for(let i = 0;i<n;i++){
-        let dizin = '';
-        for(let j=0;j<n;j++){
-            if(j<=i){
-                dizin += '#';
-            }else{
-                dizin += ' ';
-            }
-        }
-        console.log(dizin);
+/*Recursive fonksiyon ile çözüm */
+
+function steps(n, row = 0, dizin =''){
+    if(n === row){
+        return;
     }
+
+    if(n === dizin.length){
+        console.log(dizin);
+        return steps(n, row +1);
+    }
+
+    if(dizin.length <= row){
+        dizin += '#';
+    }else{
+        dizin += ' ';
+    }
+
+    steps(n,row,dizin);
 }
+
+// function steps(n){
+//     for(let i = 0;i<n;i++){
+//         let dizin = '';
+//         for(let j=0;j<n;j++){
+//             if(j<=i){
+//                 dizin += '#';
+//             }else{
+//                 dizin += ' ';
+//             }
+//         }
+//         console.log(dizin);
+//     }
+// }
 
 // function steps(n){
 //     if(n<0){
