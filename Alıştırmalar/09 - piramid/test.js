@@ -1,4 +1,4 @@
-const pyramid = require('./index');
+const piramid = require('./index');
 
 beforeEach(() => {
   jest.spyOn(console, 'log');
@@ -9,18 +9,18 @@ afterEach(() => {
 });
 
 test('piramid bir fonksiyon mudur ? ', () => {
-  expect(typeof pyramid).toEqual('function');
+  expect(typeof piramid).toEqual('function');
 });
 
 test('n = 2 için piramid ', () => {
-  pyramid(2);
+  piramid(2);
   expect(console.log.mock.calls[0][0]).toEqual(' # ');
   expect(console.log.mock.calls[1][0]).toEqual('###');
   expect(console.log.mock.calls.length).toEqual(2);
 });
 
 test('n = 3 için piramid', () => {
-  pyramid(3);
+  piramid(3);
   expect(console.log.mock.calls[0][0]).toEqual('  #  ');
   expect(console.log.mock.calls[1][0]).toEqual(' ### ');
   expect(console.log.mock.calls[2][0]).toEqual('#####');
@@ -28,7 +28,7 @@ test('n = 3 için piramid', () => {
 });
 
 test('n = 4 için piramid', () => {
-  pyramid(4);
+  piramid(4);
   expect(console.log.mock.calls[0][0]).toEqual('   #   ');
   expect(console.log.mock.calls[1][0]).toEqual('  ###  ');
   expect(console.log.mock.calls[2][0]).toEqual(' ##### ');
