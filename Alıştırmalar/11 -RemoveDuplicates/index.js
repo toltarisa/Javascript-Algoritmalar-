@@ -8,9 +8,7 @@ removeDuplicates = arr => {
   let uniqueValues = {};
 
   arr.forEach(element => {
-    if (!uniqueValues[element]) {
-      uniqueValues[element] = true;
-    }
+    uniqueValues[element] = uniqueValues[element] === null;
   });
 
   return Object.keys(uniqueValues);
